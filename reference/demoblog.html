@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo blog</title>
+
+    <style>
+
+        .header{
+            display: block;
+            float:left;width:100%;position:relative;
+            /* border: 2px solid red; */
+        }
+        #header h2{display:inline-block;line-height:1;position:relative;margin:0 !important;width:100%;background:#efebe7;border-color:#efebe7}
+
+        #logo a{float:left;line-height:1}
+        
+        .image-logo{margin-top:2px}
+
+        .logo-wrap{padding:0 0 0 25px;overflow:hidden;display:inline-block;box-sizing:border-box}
+
+        #logo a,#logo img{float:none!important;letter-spacing:0}.logo-wrap{margin-bottom:10px;margin-top:0;width:100%;padding-left:0;margin-left:0}
+        
+        
+        
+        .navigation{
+            float:left;
+            background-color: #0077b6;
+            display: block;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 15px;
+            /* border: 2px solid red; */
+        }
+        .navigation ul{
+            margin:0 auto;
+            padding: 0;
+            list-style-type:none;
+        }
+        
+        .navigation ul li{
+            float:left;
+            line-height:24px;
+            position:relative;
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            text-decoration: none;
+            border-right:1px solid rgba(255,255,255,.22);
+        }
+        .navigation ul li a{
+            display:inline-block;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: larger;
+            display: block;
+        }
+        
+        .tocdiv,.refdiv{clear:both;width:auto;position: relative;margin-bottom:1em;padding:10px;border: 1px solid #aaa;border-radius: 4px;}
+        .tocspan,.refspan{
+            font-size: 1rem;
+            float:left;
+            color:#808080
+        }
+        .tocdiv ul,.refdiv ol{
+            clear:both;
+            margin:0; 
+            overflow: hidden;
+        }
+        .tocdiv li,.refdiv li{
+            font-size: 1.125rem;
+        }
+        .tocdiv li a,.refdiv li a{
+            padding-right: 1.125rem; 
+            margin-right: 1.125rem;
+        }
+
+        .title{
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            font-size: 38px;
+            color: #000000;
+            line-height: 53px;
+            float: left;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        p{
+            display: block;
+            font-size: 24px;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        h2{
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            font-size: 34px;
+            color: #000000;
+        }
+
+        
+        body{
+            background-color: #f0ede9;
+            margin: 0;
+        }
+        
+        .main-container{
+            margin: 10px;
+        }
+        
+        .left{
+            box-sizing: border-box;
+            float: left;
+            background: #fff;
+            width: 70%;
+            padding: 25px;
+            margin-top: 2px;
+            box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 5%);
+            margin-bottom: 30px;
+            /* border: 2px solid red; */
+        }
+        
+        .right{
+            /* border: 2px solid red; */
+            position: relative;
+            box-sizing: border-box;
+            float: left;
+            background: #fff;
+            width: 29.5%;
+            margin-left: 5px;
+            /* padding: 25px; */
+            margin-top: 2px;
+            box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 5%);
+            border-left: 2px solid rgb(240 237 233);
+        }
+        .right header{
+            text-align: center;
+            display: block;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px;
+            margin-block-end: 30px;
+            /* margin-bottom: 30px; */
+        }
+        ul{
+            list-style: none;
+        }
+        .tocdiv ul,.refdiv ul{
+            list-style-type: square;
+            margin: 0px;
+            margin-top: 10px;
+        }
+        .right ul{
+            float: left;
+            padding-left: 10px;
+            margin: 0px;
+            list-style: none !important;
+        }
+        .right ul li{
+            padding: 10px 10px;
+            margin: 0;
+            background: #fff;
+            box-sizing: border-box;
+            list-style: none!important;
+            margin: 0;
+            float: left;
+            width: 100%;
+        }
+        .tocdiv ul li,.refdiv ul li{
+            padding: 0px;
+            margin:0px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        .post-img{
+            float: left;
+            width: 30%;
+            clear: both;
+        }
+        .post-data{
+            float: left;
+            position: relative;
+            width: 65%;
+            
+        }
+        .post-data a{
+            word-wrap: break-word;
+            color: rgb(73, 73, 73);
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 4px;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        .footer {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            float:left;
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .footer .copyrights .copyright a{
+            text-decoration: none;
+        }
+
+        @media screen and (max-width:1080px) {
+            .right{
+                width: 28%;
+            }
+            .container{
+                margin: 5px;
+            }     
+        }
+        @media screen and (max-width:960px) {
+            .left{
+                width:100%;
+            }
+            .right{
+                width: 0%;
+                display: none;
+            }     
+        }
+        @media screen and (max-width:720px) {
+            .left{
+                margin: 0;
+                margin-top: 2px;
+                margin-bottom: 10px;
+                padding: 5px;     
+            } 
+            .container{
+                margin: 0;
+            }
+            .navigation{
+                margin-bottom: 5px;
+            }
+        }
+        
+        </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <div class="logo-wrap">
+                <h2 id="logo" class="image-logo">
+                    <a href=""><img src="img.png" alt="TechSpice" width="300" height="87"></a>
+                </h2>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="navigation">
+        <ul id="menu-main-menu" class="menu">
+            <li class="menu-item"><a href="">Home</a></li>
+            <li class="menu-item"><a href="">Dummy</a></li>
+            <li class="menu-item"><a href="">Dummy</a></li>
+            <li class="menu-item"><a href="">About us</a></li>
+            <li class="menu-item"><a href="">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+
+        <div class="left">
+            <div class="content">
+
+                <header>
+                    <h1 class="title">ABCD</h1>
+                </header>
+                <div class="tocdiv">
+                    <span class="tocspan">Table of Contents</span>
+                    <ul>
+                        <li><a href="#starting">starting</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                    </ul>
+                </div>
+                <blockquote>
+                    <p>
+                        <em>quotes</em>
+                    </p>
+                </blockquote>
+                <p style="text-align: justify;"></p>
+                <p></p>
+                <div style="font-size:0.9em !important">
+                    <p></p>
+                    
+                    <h2 style="text-align: justify;" id="starting">Differences between natural and man-made visual stimuli</h2>
+                    <p style="text-align: justify;">Our environment consists of diverse visual stimuli – both natural and man-made. However, the images or objects reported to cause discomfort to the eyes are almost always artificial or man-made in origin. Why is it that natural scenes and objects seldom elicit a similar discomfort to the eyes?</p>
+                    <p> </p>
+                    <!-- <div id="attachment_51951" style="width: 1010px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-51951" loading="lazy" class="lazy-hidden wp-image-51951 size-full" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjY2MiIvPg==" data-lazy-type="image" data-src="https://www.scienceabc.com/wp-content/uploads/ext-www.scienceabc.com/wp-content/uploads/2022/03/Venetian-blinds-close-up-image-as-background.-Black-and-white-photo.-No-people.-Copy-space.jpg-.jpg" alt="Venetian,Blinds,,Close,Up,Image,As,Background.,Black,And,White" width="1000" height="662" srcset="" data-srcset="https://www.scienceabc.com/wp-content/uploads/2022/03/Venetian-blinds-close-up-image-as-background.-Black-and-white-photo.-No-people.-Copy-space.jpg 1000w, https://www.scienceabc.com/wp-content/uploads/2022/03/Venetian-blinds-close-up-image-as-background.-Black-and-white-photo.-No-people.-Copy-space-300x200.jpg 300w, https://www.scienceabc.com/wp-content/uploads/2022/03/Venetian-blinds-close-up-image-as-background.-Black-and-white-photo.-No-people.-Copy-space-768x508.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px"><noscript><img aria-describedby="caption-attachment-51951" loading="lazy" class="wp-image-51951 size-full" src="https://www.scienceabc.com/wp-content/uploads/ext-www.scienceabc.com/wp-content/uploads/2022/03/Venetian-blinds-close-up-image-as-background.-Black-and-white-photo.-No-people.-Copy-space.jpg-.jpg" alt="Venetian,Blinds,,Close,Up,Image,As,Background.,Black,And,White" width="1000" height="662" srcset="https://www.scienceabc.com/wp-content/uploads/2022/03/Venetian-blinds-close-up-image-as-background.-Black-and-white-photo.-No-people.-Copy-space.jpg 1000w, https://www.scienceabc.com/wp-content/uploads/2022/03/Venetian-blinds-close-up-image-as-background.-Black-and-white-photo.-No-people.-Copy-space-300x200.jpg 300w, https://www.scienceabc.com/wp-content/uploads/2022/03/Venetian-blinds-close-up-image-as-background.-Black-and-white-photo.-No-people.-Copy-space-768x508.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px"></noscript><p id="caption-attachment-51951" class="wp-caption-text">The patterns which cause discomfort to our eyes are almost always man-made such as Venetian blinds&nbsp; &nbsp;(Photo Credit : ChameleonsEye/Shutterstock)</p></div> -->
+                    <p></p>
+                    <p style="text-align: justify;">The answer lies in the visual properties of these images/objects. Man-made objects have certain statistical properties which distinguish them from natural scenes and objects. Natural stimuli follow a certain rule in which the contrast energy and spatial frequency <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2581924/">are inversely related</a>. This means that the visual system is only used to being presented with stimuli with inverse combinations of contrast energy and spatial frequencies, where one is high and the other is low. Man-made stimuli which flout this rule, where they have high contrast energy at midrange spatial frequencies are the ones often reported to cause visual discomfort.</p>
+                
+                    <h2 style="text-align: justify;" id="processing-of-urban-stimuli-by-the-brain">Processing of urban stimuli by the brain</h2>
+                    <p style="text-align: justify;">A <a href="https://www.sciencedirect.com/science/article/abs/pii/S0169204616302699">study</a> looked at the brain metabolism of oxygen while participants viewed images – both natural and man-made/urban with various statistical properties. The farther an object was in terms of visual statistical properties as compared to natural stimuli, the higher was the rating of discomfort by the participants. Further, metabolic activity in the brain was also correlated with the degree of discomfort. Stimuli that caused the most discomfort were seen to cause a higher demand for metabolic activity in the visual areas of the brain.</p>
+                    <p style="text-align: justify;">This made it clear that stripes present statistical properties which are not naturally occurring, and also place higher metabolic demand on our brain, eliciting discomfort while viewing them.</p>
+                    <h2 style="text-align: justify;" id="why-do-some-urban-stimuli-cause-headaches-migraine">Why do some urban stimuli cause headaches/migraine?</h2>
+                    <p style="text-align: justify;">Scientists <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1460-9568.2004.03495.x">studied</a> the human brain’s response to stripes to understand what in the brain is responsible for the discomfort. By using magnetoencephalography (MEG) they studied the brain activity of people while they viewed striped patterns of various frequencies. Interestingly, they found that viewing these patterns in certain frequencies induced gamma oscillations in visual regions of the brain which coincided with the people reporting discomfort and illusions. The scientists reported that the occurrence of these oscillations may be responsible for the feeling of discomfort, dizziness, or even headaches/migraine in response to stripes.</p>
+                    <p style="text-align: justify;">A recent <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(17)30406-2">study</a> confirmed this suspicion, where they studied visual images and their probability of eliciting photosensitive epilepsy patients. In this investigation, they found that certain images had a higher probability of eliciting gamma oscillations in certain populations of neurons in the visual region of the brain. These same images also showed a higher risk of eliciting seizures in patients with photosensitive epilepsy.</p>
+                    <p> </p>
+                    <p id="caption-attachment-51953" class="wp-caption-text">Gamma oscillations formed in the brain in response to viewing stripes can elicit seizures (Photo Credit : Tunatura/Shutterstock)</p>
+                    <p></p>
+                    <p style="text-align: justify;">This proved that the gamma oscillations are responsible for eliciting seizures in patients with epilepsy. These gamma oscillations when elicited in the brains of normal individuals viewing stripes can cause headaches/migraines.</p>
+                    <h2 style="text-align: justify;" id="conclusion">Conclusion</h2>
+                    <p style="text-align: justify;">Certain urban stimuli containing stripes cause headaches or discomfort in viewers. These stimuli possess statistical properties which are distinct from other natural stimuli. These properties often place higher metabolic demands on the brain.</p>
+                    <p style="text-align: justify;">These patterns are known to cause synchronous firing of neurons in visual regions of the brain giving rise to gamma oscillations. These oscillations are responsible for eliciting seizures in patients of epilepsy and are known to be the reason behind discomfort or headaches reported in response to viewing them. The discomfort in your eyes from viewing stripes is thus, a result of the brain being faced with the problem of processing stimuli that do not naturally occur in our world. In many ways, it is similar to and as simple as your computer hanging in response to running software it isn’t built for.</p>
+                    
+                    <div class="refdiv">
+                        <span class="refspan">References</span>
+                        <ol>
+                            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2581924/">European PMC Funders Group</a></li>
+                            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0169204616302699">Journal Of Landscape and Urban Planning</a></li>
+                            <li><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1460-9568.2004.03495.x">European Journal Of Neuroscience</a></li>
+                            <li><a href="https://www.cell.com/current-biology/fulltext/S0960-9822(17)30406-2">Cell Press</a></li>
+                        </ol>
+                    </div>
+                    
+                    <div class="code-block code-block-4" style="margin: 8px auto; text-align: center; display: block; clear: both;">
+        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right">
+            <header>
+                Popular Posts
+            </header>
+            <ul>
+                <li>
+                    <div class="more-post-data">
+                        <div class="post-img">
+                            <a href="" title=""><img width=65 height=65 src="" alt=""></a>
+                        </div>
+                        <div class="post-data">
+                            <a href="" title="">Post data Lorem ipsum dolor sit.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="more-post-data">
+                        <div class="post-img">
+                            <a href="" title=""><img width=65 height=65 src="" alt=""></a>
+                        </div>
+                        <div class="post-data">
+                            <a href="" title="">Post data Lorem ipsum dolor sit.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="more-post-data">
+                        <div class="post-img">
+                            <a href="" title=""><img width=65 height=65 src="" alt=""></a>
+                        </div>
+                        <div class="post-data">
+                            <a href="" title="">Post data Lorem ipsum dolor sit.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="more-post-data">
+                        <div class="post-img">
+                            <a href="" title=""><img width=65 height=65 src="" alt=""></a>
+                        </div>
+                        <div class="post-data">
+                            <a href="" title="">Post data Lorem ipsum dolor sit.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="more-post-data">
+                        <div class="post-img">
+                            <a href="" title=""><img width=65 height=65 src="" alt=""></a>
+                        </div>
+                        <div class="post-data">
+                            <a href="" title="">Post data Lorem ipsum dolor sit.</a>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        
+            
+        </div>
+    </div>
+        
+    <div class="footer">
+        
+        <div class="container">
+        <p style="font-size: 20px; color: #505050;">This is site footer.info about affiliate program and copyright is here.</p>
+        </div>
+        <div class="copyrights">
+            <div class="copyright"><a href=" https://www.scienceabc.com/" title=" Fun and interesting facts from science and the universe">Science ABC</a>
+                Copyright © 2022.
+            </div>
+            <nav class="navigation">
+                <ul id="menu-bottom-menu" class="menu clearfix"><li id="menu-item-52041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52041"><a href="https://www.scienceabc.com/write-for-us">Write for us!</a></li>
+                    <li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="https://www.scienceabc.com/about-us">About Us</a></li>
+                    <li id="menu-item-20065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20065"><a href="https://www.scienceabc.com/privacy-policy">Privacy Policy</a></li>
+                    <li id="menu-item-20067" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20067"><a href="https://www.scienceabc.com/terms-of-use">Terms of Use</a></li>
+                    <li id="menu-item-30550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30550"><a href="https://www.scienceabc.com/contact-us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
